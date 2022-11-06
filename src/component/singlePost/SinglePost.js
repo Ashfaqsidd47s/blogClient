@@ -17,7 +17,7 @@ function SinglePost() {
 
     useEffect(()=>{
         const getPost = async ()=>{
-            const res =await axios.get("http://localhost:8080/api/posts/" +path);
+            const res =await axios.get("https://codeplayerblogs-api/api/posts/" +path);
             console.log(res);
             setPost(res.data);
             setTitle(res.data.title);
@@ -28,14 +28,14 @@ function SinglePost() {
 
     const handelDelete = async()=>{
         try {
-            await axios.delete("http://localhost:8080/api/posts/" +path,{data:{username:user.username}});
+            await axios.delete("https://codeplayerblogs-api/api/posts/" +path,{data:{username:user.username}});
             window.location.replace("/");
         } catch (err) {}
     };
 
     const handelUpdate =async ()=>{
         try {
-            await axios.put("http://localhost:8080/api/posts/" +path,{username:user.username, title:title, desc:desc});
+            await axios.put("https://codeplayerblogs-api/api/posts/" +path,{username:user.username, title:title, desc:desc});
             setUpdateMode(false);
         } catch (err) {}
     }

@@ -8,7 +8,7 @@ function Sidebar() {
 
   useEffect(()=>{
     const getCats = async ()=>{
-      const res = await axios.get("http://localhost:8080/api/categories");
+      const res = await axios.get("https://codeplayerblogs-api/api/categories");
       setCats(res.data);
       console.log("cats:",cats)
     };

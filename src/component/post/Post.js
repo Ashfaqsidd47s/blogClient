@@ -3,7 +3,7 @@ import "./post.css";
 import { Link } from "react-router-dom";
 
 function Post({post}) {
-    const PF = "http://localhost:8080/images/";
+    const PF = "https://codeplayerblogs-api/images/";
 
   return (
     <div className="post">

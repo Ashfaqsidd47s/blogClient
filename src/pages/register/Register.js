@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
     setErr(false);
     try {
-      const res =await axios.post("http://localhost:8080/api/auth/register",{username:username , email:email , password:password});
+      const res =await axios.post("https://codeplayerblogs-api/api/auth/register",{username:username , email:email , password:password});
       console.log(res);
       res.data && window.location.replace("/login");
     } catch (err) {

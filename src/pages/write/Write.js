@@ -23,13 +23,13 @@ function Write() {
             data.append("file",file);
             newPost.photo = filename;
             try {
-                await axios.post("http://localhost:8080/api/upload", data)
+                await axios.post("https://codeplayerblogs-api/api/upload", data)
             } catch (err) {
                 console.log(err);
             }
         }
         try {
-            const res = await axios.post("http://localhost:8080/api/posts",newPost);
+            const res = await axios.post("https://codeplayerblogs-api/api/posts",newPost);
             window.location.replace("/post/"+res.data._id)
         } catch (err) {
             

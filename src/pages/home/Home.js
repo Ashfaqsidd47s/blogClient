@@ -12,7 +12,7 @@ function Home() {
 
   useEffect(()=>{
     const fetchPosts = async ()=>{
-      const res = await axios.get("http://localhost:8080/api/posts" +search)
+      const res = await axios.get("https://codeplayerblogs-api/api/posts" +search)
       setPosts(res.data);
       console.log("post:",posts)
     }

@@ -4,7 +4,7 @@ import { Context } from '../../context/Context';
 import "./topbar.css";
 
 function Topbar() {
-    const PF = "https://codeplayerblogs-api/images/";
+    const PF = "https://codeplayerblogs-api.cyclic.app/images/";
     const {user,dispatch} =useContext(Context);
 
     const handelLogout =()=>{

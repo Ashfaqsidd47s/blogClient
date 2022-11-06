@@ -5,7 +5,7 @@ import "./settings.css";
 import axios from 'axios';
 
 function Settings() {
-    const PF = "https://codeplayerblogs-api/images/";
+    const PF = "https://codeplayerblogs-api.cyclic.app/images/";
     const {user,dispatch } = useContext(Context);
     const [file,setFile] = useState(null);
     const [username,setUsername] = useState("");
@@ -29,13 +29,13 @@ function Settings() {
             data.append("file",file);
             updatedUser.profilePic = filename;
             try {
-                await axios.post("https://codeplayerblogs-api/api/upload", data)
+                await axios.post("https://codeplayerblogs-api.cyclic.app/api/upload", data)
             } catch (err) {
                 console.log(err);
             }
         }
         try {
-            const res =await axios.put("https://codeplayerblogs-api/api/users/" +user._id,updatedUser);
+            const res =await axios.put("https://codeplayerblogs-api.cyclic.app/api/users/" +user._id,updatedUser);
             setSuccess(true);
             dispatch({type: "UPDATE_SUCCESS",payload: res.data});
         } catch (err) {

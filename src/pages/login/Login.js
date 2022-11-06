@@ -14,7 +14,7 @@ function Login() {
     dispatch({type: "LOGIN_START"});
     console.log("isfetchng:",isFetching)
     try {
-      const res =await axios.post("https://codeplayerblogs-api/api/auth/login",{email:email , password: password});
+      const res =await axios.post("https://codeplayerblogs-api.cyclic.app/api/auth/login",{email:email , password: password});
       console.log(res);
       dispatch({type: "LOGIN_SUCCESS", payload: res.data });
       console.log("user:",user);
